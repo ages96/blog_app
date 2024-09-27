@@ -19,6 +19,16 @@
         "vue": "^3.3.13"
     },
     "dependencies": {
-        "daisyui": "^4.12.10"
+        "@fortawesome/fontawesome-svg-core": "^6.6.0",
+        "@fortawesome/free-brands-svg-icons": "^6.6.0",
+        "@fortawesome/free-solid-svg-icons": "^6.6.0",
+        "@fortawesome/vue-fontawesome": "^3.0.8",
+        "@inertiajs/inertia": "^0.11.1",
+        "@inertiajs/inertia-vue3": "^0.6.0",
+        "@kangc/v-md-editor": "^2.3.18",
+        "codemirror": "^5.65.18",
+        "daisyui": "^4.12.10",
+        "markdown-it": "^14.1.0",
+        "simplemde": "^1.11.2"
     }
 }
