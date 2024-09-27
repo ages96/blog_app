@@ -18,12 +18,22 @@ class PostTransformer extends TransformerAbstract
         return [
             'id' => $post->id,
             'user_id' => $post->user_id,
-            'username'=>$post->user->name,
+            'username' => $post->user->name,
             'title' => $post->title,
             'content' => $this->formatContent($post->content),
             'image' => $post->image,
             'created_at' => $post->created_at->toDateTimeString(),
             'updated_at' => $post->updated_at->toDateTimeString(),
+            // Transform and include comments
+            'comments' => $post->comments->map(function ($comment) {
+                return [
+                    'id' => $comment->id,
+                    'user_id' => $comment->user_id,
+                    'username' => $comment->user->name,  // Fetch the commenter's name
+                    'body' => $comment->body,            // The comment content
+                    'created_at' => $comment->created_at->toDateTimeString(),
+                ];
+            }),
         ];
     }
 
