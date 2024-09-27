@@ -49,7 +49,7 @@
       <div class="mt-4">
         <ul>
           <li v-for="comment in post.comments" :key="comment.id" class="border-b py-2">
-            <strong class="text-gray-800">{{ comment.user.name }}</strong>: {{ comment.body }}
+            <strong class="text-gray-800">{{ comment.username }}</strong>: {{ comment.body }}
           </li>
         </ul>
       </div>

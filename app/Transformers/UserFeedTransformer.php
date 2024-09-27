@@ -17,7 +17,7 @@ class UserFeedTransformer extends TransformerAbstract
             'image' => $post->image,
             'created_at' => $post->created_at->toIso8601String(), // Format as needed
             'updated_at' => $post->updated_at->toIso8601String(), // Format as needed
-            'is_repost' => $post->isRepost ?? false,
+            'isRepost' => $post->isRepost ?? false,
         ];
     }
 }
